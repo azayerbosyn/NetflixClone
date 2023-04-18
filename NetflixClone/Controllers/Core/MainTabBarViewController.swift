@@ -11,13 +11,15 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemYellow
         overrideUserInterfaceStyle = .dark
-        view.backgroundColor = .systemBackground
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: UpcomingViewController())
         let vc3 = UINavigationController(rootViewController: SearchViewController())
         let vc4 = UINavigationController(rootViewController: DownloadsViewController())
+        
+        
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "play.circle")
@@ -30,11 +32,12 @@ class MainTabBarViewController: UITabBarController {
         vc4.title = "Downloads"
         
         
-        tabBar.tintColor = .label
-        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
         
+        tabBar.tintColor = .label
+        
+        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+
     }
 
 
 }
-
